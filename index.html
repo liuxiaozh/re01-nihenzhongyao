@@ -1,29 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>元岛作业</title>
     <style>
-        body{
-            margin: 0;
-        }
+      body {
+        margin: 0;
+      }
+      .logo {
+        background-color: #f1f1f1;
+        text-align: center;
+        padding: 40px;
+      }
+      .hello {
+        margin: 30px auto;
+        text-align: center;
+        padding: 20px;
+        line-height: 1.7;
+        background-color: pink;
+        flex: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      #content {
+        display: flex;
+        background-color: aquamarine;
+      }
+      .botton {
+        background-color: #f1f1f1;
+        text-align: center;
+        padding: 40px;
+        font-size: 12px;
+      }
+      .test {
+        background-color: cornflowerblue;
+        margin: 30px;
+        flex: 1;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    <div style="background-color: #f1f1f1;text-align: center;padding: 40px;">
-        <img src="./images/lxz.jpg" alt="lxz">
+  <body>
+    <div class="logo">
+      <img src="./images/lxz.jpg" alt="lxz" />
     </div>
-    <div style="width: 700px;margin: 30px auto;padding: 20px;line-height: 1.7;background-color: pink;">
-        <p>你好</p>
-        <p>这是我的网站</p>
-        <a href="./test04/test04.html">git使用命令</a>
+
+    <div id="content">
+      <div class="hello">
+        <div>你好</div>
+        <div>这是我的网站</div>
+      </div>
+      <div class="test">
+        元岛作业<br />
+        <li><a href="./test04/test04.html">git使用命令</a><br /></li>
+        <li><a href="./test05/test05.html">标签使用</a><br /></li>
+        <li><a href="./test06/test06.html">图片地址使用</a><br /></li>
+        <li><a href="./test07/test07.html">css使用</a><br /></li>
+      </div>
     </div>
-    <div style="background-color: #f1f1f1;text-align: center;padding: 40px;font-size: 12px;">
-        <p>我的网站</p>
-        <a href="https://kangwenchang.com/">这里是康老师的网站</a>
+    <div class="botton">
+      <p>我的网站</p>
+      <a href="https://kangwenchang.com/">这里是康老师的网站</a>
     </div>
-</body>
+  </body>
 </html>

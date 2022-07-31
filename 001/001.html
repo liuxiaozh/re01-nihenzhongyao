@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #box {
+        width: 800px;
+        height: 620px;
+        background-color: pink;
+      }
+      #box > div:nth-child(1) {
+        width: 600px;
+        height: 200px;
+        background-color: darkgray;
+        float: left;
+      }
+      #box > div:nth-child(2) {
+        width: 200px;
+        height: 200px;
+        background-color: darkorchid;
+        float: left;
+        margin: 10px 10px 10px 0;
+      }
+      #box > div:nth-child(3) {
+        width: 200px;
+        height: 200px;
+        background-color: salmon;
+        float: left;
+        margin: 10px;
+      }
+      #box > div:nth-child(4) {
+        width: 200px;
+        height: 200px;
+        background-color: palegreen;
+        float: right;
+      }
+      #box > div:nth-child(5) {
+        width: 600px;
+        height: 200px;
+        background-color: orange;
+        float: left;
+      }
+      #black {
+        width: 1200px;
+        height: 50px;
+        background-color: blue;
+        margin: 10px auto;
+      }
+      #box1 {
+        width: 200px;
+        height: 200px;
+        background-color: orange;
+      }
+      #box2 {
+        width: 200px;
+        height: 200px;
+        background-color: khaki;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box">
+      <div>顶部元素</div>
+      <div>左侧元素</div>
+      <div id="self">当前元素</div>
+      <div>右侧元素</div>
+      <div>底部元素</div>
+    </div>
+    <div id="black">black</div>
+    <div id="box1">box1</div>
+    <div id="box2">box2</div>
+  </body>
+</html>

@@ -8,63 +8,132 @@
     <style>
       body {
         margin: 0;
+        padding: 0;
+        background-color: #eee;
       }
-      .logo {
-        background-color: #f1f1f1;
-        text-align: center;
-        padding: 40px;
-      }
-      .hello {
-        margin: 30px auto;
-        text-align: center;
-        padding: 20px;
-        line-height: 1.7;
-        background-color: pink;
-        flex: 2;
+      .flex {
         display: flex;
-        align-items: center;
+      }
+      .juzhong {
         justify-content: center;
         flex-direction: column;
+        align-items: center;
       }
-      #content {
+      .navigation {
+        width: 200px;
+      }
+      .logo {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+      }
+      .nav {
+        padding: 10px;
+      }
+      .navigation > div:nth-child(odd) {
+        background-color: rgb(112, 183, 187);
+      }
+      .navigation > div:nth-child(even) {
+        background-color: rgb(227, 164, 208);
+      }
+
+      .baiSe {
+        background-color: white;
+      }
+      #lxz {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+      }
+      .content {
+        background-color: rgb(207, 198, 252);
+        flex: 1;
+      }
+
+      .left {
+        flex: 4;
         display: flex;
-        background-color: aquamarine;
+        line-height: 1.7;
+      }
+      .right {
+        padding: 10px 0 10px 10px;
+        flex: 1;
+        background-color: coral;
+      }
+      li {
+        list-style: none;
       }
       .botton {
-        background-color: #f1f1f1;
-        text-align: center;
-        padding: 40px;
-        font-size: 12px;
+        margin: 20px;
       }
-      .test {
-        background-color: cornflowerblue;
-        margin: 30px;
+      .jieshao {
+        background-color: aquamarine;
+        margin: 20px;
+      }
+      .note {
+        height: 400px;
+        background-color: bisque;
+        margin: 20px;
         flex: 1;
+      }
+      @media (max-width: 600px) {
+        .navigation {
+          display: none;
+        }
+        .flex {
+          flex-direction: column;
+        }
       }
     </style>
   </head>
 
-  <body>
-    <div class="logo">
-      <img src="./images/lxz.jpg" alt="lxz" />
-    </div>
-
-    <div id="content">
-      <div class="hello">
-        <div>你好</div>
-        <div>这是我的网站</div>
+  <body class="flex">
+    <div class="navigation baiSe">
+      <!-- 导航栏 -->
+      <div class="logo flex">
+        <img src="./images/lxz.jpg" id="lxz" alt="lxz" />
+        <div style="padding-left: 20px">lxz</div>
       </div>
-      <div class="test">
-        元岛作业<br />
-        <li><a href="./test04/test04.html">git使用命令</a><br /></li>
-        <li><a href="./test05/test05.html">标签使用</a><br /></li>
-        <li><a href="./test06/test06.html">图片地址使用</a><br /></li>
-        <li><a href="./test07/test07.html">css使用</a><br /></li>
-      </div>
+      <div id="nav001" class="nav">导航栏</div>
+      <div id="nav002" class="nav">导航栏</div>
+      <div id="nav003" class="nav">导航栏</div>
+      <div id="nav004" class="nav">导航栏</div>
+      <div id="nav005" class="nav">导航栏</div>
     </div>
-    <div class="botton">
-      <p>我的网站</p>
-      <a href="https://kangwenchang.com/">这里是康老师的网站</a>
+    <div class="content">
+      <!-- 内容 -->
+      <div class="top flex">
+        <div class="left juzhong">
+          <div class="jieshao">
+            <div>你好</div>
+            <div>这是我的网站</div>
+            <div>这里主要内容是记录我的学习笔记和练习作业</div>
+          </div>
+          <div class="note">
+            <div>这里是学习笔记</div>
+            <div>这里是学习笔记</div>
+            <div>这里是学习笔记</div>
+            <div>这里是学习笔记</div>
+            <div>这里是学习笔记</div>
+            <div>这里是学习笔记</div>
+            <div>这里是学习笔记</div>
+            <div>这里是学习笔记</div>
+            <div>这里是学习笔记</div>
+            <div>这里是学习笔记</div>
+          </div>
+        </div>
+        <div class="right">
+          <div>练习作业</div>
+          <li><a href="./test04/test04.html">git使用命令</a><br /></li>
+          <li><a href="./test05/test05.html">标签使用</a><br /></li>
+          <li><a href="./test06/test06.html">图片地址使用</a><br /></li>
+          <li><a href="./test07/test07.html">css使用</a><br /></li>
+        </div>
+      </div>
+      <div class="botton flex juzhong">
+        <p>我的网站</p>
+        <a href="https://kangwenchang.com/">这里是康老师的网站</a>
+      </div>
     </div>
   </body>
 </html>

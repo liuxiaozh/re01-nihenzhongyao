@@ -24,6 +24,12 @@
       align-items: center;
       font-size: 30px;
     }
+    .flex {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      align-items: center;
+    }
     div {
       background-color: darkgray;
     }
@@ -31,7 +37,7 @@
       height: 40px;
       border: 0px;
       line-height: 40px;
-      font-size: 40px;
+      font-size: 24px;
       text-align: center;
     }
     span {
@@ -40,12 +46,24 @@
       border: 0px;
       line-height: 30px;
     }
+    @media (max-width: 600px) {
+      .flex {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
   </style>
 
   <body>
-    <div>
-      <input id="content" type="text" placeholder="这里填写你想要做的事" />
-      <span id="anNiu" onclick="change()">✔</span>
+    <div class="flex">
+      <div>
+        <input id="content" type="text" placeholder="这里填写你想要做的事" />
+      </div>
+      <div>
+        <span id="anNiu" onclick="change()">✔</span>
+      </div>
     </div>
     <script>
       let flag = false;

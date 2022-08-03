@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>起始页：填写重要的事</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    html {
+      height: 100%;
+    }
+    body {
+      width: 100%;
+      height: 100%;
+      background-color: darkgray;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+    }
+    div {
+      background-color: darkgray;
+    }
+    input {
+      height: 40px;
+      border: 0px;
+      line-height: 40px;
+      font-size: 40px;
+      text-align: center;
+    }
+    span {
+      width: 20px;
+      height: 30px;
+      border: 0px;
+      line-height: 30px;
+    }
+  </style>
+
+  <body>
+    <div>
+      <input id="content" type="text" placeholder="这里填写你想要做的事" />
+      <span id="anNiu" onclick="change()">✔</span>
+    </div>
+    <script>
+      let flag = false;
+      function change() {
+        let anNiu = document.getElementById("anNiu");
+        let content = document.getElementById("content");
+
+        if (flag) {
+          flag = false;
+          anNiu.innerText = "✔";
+          content.value = "";
+          content.style.background = " white";
+          content.style.color = "black";
+          content.readOnly = false;
+          window.localStorage.removeItem("shi");
+        } else {
+          flag = true;
+          anNiu.innerText = "✘";
+          content.style.background = " darkgray";
+          content.style.color = "white";
+          content.readOnly = true;
+          window.localStorage.setItem("shi", content.value);
+        }
+      }
+      let data = window.localStorage.getItem("shi");
+      if (data) {
+        document.getElementById("content").value = data;
+        change();
+      }
+    </script>
+  </body>
+</html>
